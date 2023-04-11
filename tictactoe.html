@@ -6,15 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe Game</title>
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="icon" href="imgs/logo.jpg" type="image/icon">
   </head>
   <body>
     <nav>
       <ul>
+        <li><img src="imgs/logo.jpg" alt="logo"></li>
         <li>TicTacToe</li>
       </ul>
     </nav>
 
     <div class="gameContainer">
+      <section class="gameInfo">
+        <div>
+          <h1>Let's play!</h1>
+          <div>
+            <span class="info">Current player: X</span>
+            <button id="reset">Reset</button>
+          </div>
+        </div>
+      </section>
       <div class="container">
         <div class="line"></div>
 
@@ -28,17 +39,13 @@
         <div class="box bb-0"><span class="boxtext"></span></div>
         <div class="box bb-0 br-0"><span class="boxtext"></span></div>
       </div>
-      <div class="gameInfo">
-        <h1>Welcome</h1>
-        <div>
-          <span class="info">X Turn</span>
-          <button id="reset">Reset</button>
-        </div>
-        <div class="imgBox">
-          <img src="imgs/dance.gif" alt="" />
-        </div>
+      <div class="imgBox">
+        <img src="imgs/dance.gif" alt="" />
       </div>
     </div>
+    <footer>
+      <span>Made with <img class="js-logo" src="imgs/js.png"></span>
+    </footer>
     <script src="scripts/script.js"></script>
   </body>
 </html>

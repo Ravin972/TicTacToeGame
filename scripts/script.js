@@ -30,12 +30,16 @@ const checkWin = () => {
       boxtext[e[2]].innerText === boxtext[e[1]].innerText &&
       boxtext[e[0]].innerText !== ""
     ) {
-      document.querySelector(".info").innerText =
-        boxtext[e[0]].innerText + " WON ";
+      document.querySelector(".info").innerText = "Player " + 
+        boxtext[e[0]].innerText + " won!";
+        document.querySelector(".info").style.marginLeft = '30px'
       gameover = true;
       document
         .querySelector(".imgBox")
         .getElementsByTagName("img")[0].style.width = "100px";
+      document.querySelector(".imgBox").style.position = "absolute";
+      document.querySelector(".imgBox").style.right = "50px";
+      document.querySelector(".imgBox").style.bottom = "70px";
       document.querySelector(
         ".line",
       ).style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
@@ -49,17 +53,17 @@ const checkWin = () => {
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach((element) => {
   let boxtext = element.querySelector(".boxtext");
-  element.addEventListener("click", () => {
-    if (boxtext.innerText === "") {
-      boxtext.innerText = turn;
-      turn = changeTurn();
-      musicTurn.play();
-      checkWin();
-      if (!gameover) {
-        document.getElementsByClassName("info")[0].innerText = turn + " Turn";
+    element.addEventListener("click", () => {
+      if (boxtext.innerText === "") {
+        boxtext.innerText = turn;
+        turn = changeTurn();
+        musicTurn.play();
+        checkWin();
+        if (!gameover) {
+          document.getElementsByClassName("info")[0].innerText = "Current player: " + turn;
+        }
       }
-    }
-  });
+    });
 });
 
 //Add onclick listener to reset button
@@ -71,7 +75,8 @@ reset.addEventListener("click", () => {
   turn = "X";
   gameover = false;
   document.querySelector(".line").style.width = "0vw";
-  document.getElementsByClassName("info")[0].innerText = turn + " Turn";
+  document.getElementsByClassName("info")[0].innerText = "Current player: " + turn;
+  document.querySelector(".info").style.marginLeft = '0'
   document.querySelector(".imgBox").getElementsByTagName("img")[0].style.width =
     "0px";
 });

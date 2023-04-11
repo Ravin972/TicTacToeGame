@@ -7,11 +7,10 @@
 }
 
 nav{
-    background-color: rgb(0, 61, 71);
-    color: rgb(255, 255, 255);
-    height: 65px;
+    background-color: #457b9d;
+    color: #f1faee;
+    height: 80px;
     font-size: 27px;
-    display: flex;
     padding: 0 12px;
     font-family: 'Roboto Mono', monospace;
 }
@@ -21,6 +20,15 @@ nav ul {
     font-weight: 300;
 }
 
+nav li img {
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+}
+
+nav li {
+    text-align: center;
+}
 .gameContainer{
     display: flex;
     justify-content: center;
@@ -28,11 +36,13 @@ nav ul {
 }
 
 .container{
-     display: grid;
-     grid-template-columns: repeat(3, 10vw);
-     grid-template-rows: repeat(3, 10vw);
-     font-family: 'Permanent Marker', cursive;
-     position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    font-family: 'Permanent Marker', cursive;
+    position: relative;
+    margin-left: 350px;
+    margin-top: 30px;
 }
 
 .box{
@@ -45,23 +55,32 @@ nav ul {
 }
 
 .box:hover{
-    background-color: rgb(216, 230, 233);
+    background-color: #f1faee;
 }
 
 .info{
-    font-size: 23px;
+    font-size: 20px;
     flex-wrap: wrap;
     display: flex;
-    margin: 75px;
+    margin: 75px 0;
+    color: #e63946;
 }
 
 .gameInfo{
     padding: 0 34px;
+    height: 83vh;
+    background-color: #a8dadc;
+    position: absolute;
+    left: 0px;
+    top: 80px;
     font-family: 'Press Start 2P', cursive;
+    box-shadow: 5px 0 10px #a8dadc;
 }
 
 .gameInfo h1{
-    font-size: 2.5rem;
+    font-size: 30px;
+    margin-top: 90px;
+    color: #1d3557;
 }
 
 .imgBox img{
@@ -86,22 +105,47 @@ nav ul {
 }
 
 #reset {
-  margin: -26px 87px;
+  margin: -26px 100px;
   padding: 10px 25px;
-  background: rgb(255 97 71);
+  background: #e63946;
   border-radius: 12px;
+  box-shadow: 0 0 10px #1d3557;
   cursor: pointer;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-size: 20px;
-  font-weight: bolder;
+  color: #f1faee;
+  border: none;
 }
 
 .line{
-    background-color: rgb(235, 41, 41);
-    height: 3px;
+    background-color: #e63946;
+    height: 5px;
     width: 0;
     position: absolute;
     transition: width 1s ease-in-out;
+}
+
+footer {
+    position: relative;
+    background-color: #1d3557;
+    color: #f1faee;
+    height: 40px;
+    font-size: 20px;
+    z-index: 100;
+    bottom: -47px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace; 
+}
+
+footer span {
+    position: absolute;
+    margin-top: 3px;
+    left: 45%;
+}
+.js-logo {
+    width: 30px;
+    height: 30px;
+    margin-bottom: -3px;
 }
 
 @media screen and (max-width: 950px)
