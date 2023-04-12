@@ -7,17 +7,13 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-nav {
-  background-color: whitesmoke;
-  color: rgb(255, 255, 255);
-  box-shadow: 2px 2px 10px rgba(65, 63, 63, 0.2);
-  height: 6vh;
-  display: flex;
-  padding: 0 1em;
-  font-family: "Roboto Mono", monospace;
-  font-size: 1.9rem;
-  justify-content: center;
-  align-items: center;
+nav{
+    background-color: #457b9d;
+    color: #f1faee;
+    height: 80px;
+    font-size: 27px;
+    padding: 0 12px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 nav ul {
@@ -25,20 +21,6 @@ nav ul {
   font-weight: 700;
 }
 
-nav ul li {
-  background-image: linear-gradient(90deg, tomato, yellow);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -ms-background-clip: text;
-  color: transparent;
-}
-
-.gameContainer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 2rem;
-=======
 nav li img {
     height: 30px;
     width: 30px;
@@ -72,32 +54,33 @@ nav li {
   position: relative;
 }
 
-.box {
-  border: 2px solid rgb(19, 18, 18);
-  font-size: 8vw;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.box:hover{
+    background-color: #f1faee;
 }
 
-.box:hover {
-  background-color: rgb(216, 230, 233);
+.info{
+    font-size: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    margin: 75px 0;
+    color: #e63946;
 }
 
-.info {
-  font-size: 1.1rem;
-  text-align: center;
-  font-weight: 100;
-  margin: 0.9em auto;
-  font-family: cursive;
+.gameInfo{
+    padding: 0 34px;
+    height: 83vh;
+    background-color: #a8dadc;
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 5px 0 10px #a8dadc;
 }
 
-.gameInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.gameInfo h1{
+    font-size: 30px;
+    margin-top: 90px;
+    color: #1d3557;
 }
 
 .gameInfo h1 {
@@ -133,27 +116,50 @@ nav li {
 #reset {
   margin: -26px 100px;
   padding: 10px 25px;
-  background-image: linear-gradient(120deg, tomato, yellow);
-  border-radius: 5px;
-  color: aliceblue;
+  background: #e63946;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #1d3557;
   cursor: pointer;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  color: #f1faee;
   border: none;
-  outline: none;
-  font-size: 0.9rem;
-  font-weight: bolder;
-  box-shadow: 2px 2px 10px rgba(65, 63, 63, 0.2);
 }
 
-.line {
-  background-color: rgb(235, 41, 41);
-  height: 3px;
-  width: 0;
-  position: absolute;
-  transition: width 1s ease-in-out;
+.line{
+    background-color: #e63946;
+    height: 5px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
 }
 
-@media screen and (max-width: 950px) {
-  .gameContainer {
+footer {
+    position: relative;
+    background-color: #1d3557;
+    color: #f1faee;
+    height: 40px;
+    font-size: 20px;
+    z-index: 100;
+    bottom: -47px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace; 
+}
+
+footer span {
+    position: absolute;
+    margin-top: 3px;
+    left: 45%;
+}
+.js-logo {
+    width: 30px;
+    height: 30px;
+    margin-bottom: -3px;
+}
+
+@media screen and (max-width: 950px)
+{
+   .gameContainer{
     flex-wrap: wrap;
   }
 
