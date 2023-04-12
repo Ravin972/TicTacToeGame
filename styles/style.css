@@ -1,11 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Permanent+Marker&family=Press+Start+2P&family=Roboto+Mono&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Permanent+Marker&family=Press+Start+2P&family=Roboto+Mono&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 nav{
     background-color: #457b9d;
     color: #f1faee;
@@ -16,8 +16,8 @@ nav{
 }
 
 nav ul {
-    list-style-type: none;
-    font-weight: 300;
+  list-style-type: none;
+  font-weight: 700;
 }
 
 nav li img {
@@ -29,6 +29,7 @@ nav li img {
 nav li {
     text-align: center;
 }
+
 .gameContainer{
     display: flex;
     justify-content: center;
@@ -83,25 +84,25 @@ nav li {
     color: #1d3557;
 }
 
-.imgBox img{
-    width: 0;
-    transition: width 1s ease-in-out;
+.imgBox img {
+  width: 0;
+  transition: width 1s ease-in-out;
 }
 
-.br-0{
-    border-right: 0;
+.br-0 {
+  border-right: 0;
 }
 
-.bl-0{
-    border-left: 0;
+.bl-0 {
+  border-left: 0;
 }
 
-.bt-0{
-    border-top: 0;
+.bt-0 {
+  border-top: 0;
 }
 
-.bb-0{
-    border-bottom: 0;
+.bb-0 {
+  border-bottom: 0;
 }
 
 #reset {
@@ -150,16 +151,18 @@ footer span {
 
 @media screen and (max-width: 950px)
 {
-   .gameContainer{
+   @media screen and (max-width: 950px) {
+  .gameContainer {
     flex-wrap: wrap;
-    }
-    .gameInfo{
-        margin-top: 70px;
-    }
-    .container{
-        display: grid;
-        grid-template-rows: repeat(3, 20vw);
-        grid-template-columns: repeat(3, 20vw);
-    }
+  }
 
-}
+  .gameInfo {
+    margin-top: 70px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+   }
+  }
